@@ -26,10 +26,15 @@ cask "journal" do
 
   name "journal"
   desc "Local-first developer journal with semantic search and AI synthesis"
-  homepage "https://displace.tech"
+  homepage "https://github.com/ericmann/journal"
+
+  # This tap is retired. journal now ships from the personal ericmann tap:
+  #   brew install ericmann/tap/journal
+  # This cask is frozen at v2.4.0 and receives no further updates.
+  deprecate! date: "2026-06-16", because: "moved to the ericmann tap — reinstall with `brew install ericmann/tap/journal`"
 
   livecheck do
-    skip "Auto-generated on release."
+    skip "Retired — moved to ericmann/tap."
   end
 
   binary "journal"
